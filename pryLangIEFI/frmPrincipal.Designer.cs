@@ -37,17 +37,17 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.Location = new System.Drawing.Point(39, 9);
+            this.lblBienvenido.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Location = new System.Drawing.Point(138, 9);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(432, 89);
+            this.lblBienvenido.Size = new System.Drawing.Size(238, 50);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.Click += new System.EventHandler(this.lblBienvenido_Click);
             // 
             // btnProductos
             // 
-            this.btnProductos.Location = new System.Drawing.Point(2, 101);
+            this.btnProductos.Location = new System.Drawing.Point(2, 62);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(163, 68);
             this.btnProductos.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnVentas
             // 
-            this.btnVentas.Location = new System.Drawing.Point(171, 101);
+            this.btnVentas.Location = new System.Drawing.Point(171, 62);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(163, 68);
             this.btnVentas.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // btnListado
             // 
-            this.btnListado.Location = new System.Drawing.Point(340, 101);
+            this.btnListado.Location = new System.Drawing.Point(340, 62);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(163, 68);
             this.btnListado.TabIndex = 3;
@@ -77,7 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(521, 200);
+            this.ClientSize = new System.Drawing.Size(521, 162);
             this.Controls.Add(this.btnListado);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnProductos);

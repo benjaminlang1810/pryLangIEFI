@@ -16,5 +16,10 @@ namespace pryLangIEFI
         {
             InitializeComponent();
         }
+
+        private void frmProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

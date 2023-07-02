@@ -16,5 +16,10 @@ namespace pryLangIEFI
         {
             InitializeComponent();
         }
+
+        private void lblVentas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
