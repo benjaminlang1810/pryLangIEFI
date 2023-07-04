@@ -21,5 +21,25 @@ namespace pryLangIEFI
         {
 
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            this.Hide();    
+            frmProductos frmProductos = new frmProductos(); 
+            frmProductos.ShowDialog();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmVentas frmVentas = new frmVentas();  
+            frmVentas.ShowDialog();
+        }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            frmListado frmListado = new frmListado();
+            frmListado.ShowDialog();
+        }
     }
 }
