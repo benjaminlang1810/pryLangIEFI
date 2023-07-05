@@ -25,7 +25,7 @@ namespace pryLangIEFI
 
         private void btnVolverListado_Click(object sender, EventArgs e)
         {
-            this.Hide();    
+            this.Hide();
             frmPrincipal frmPrincipal = new frmPrincipal();
             frmPrincipal.Show();    
         }
@@ -42,11 +42,15 @@ namespace pryLangIEFI
 
         private void btnVerTodo_Click(object sender, EventArgs e)
         {
+            dgvListado.Rows.Clear();
             for (int i = 0; i < 10; i++)
             {
-                if (MatrizProductos[i,2]!=null)
+                if (MatrizProductos[i,2] != null)
                 {
-                    dgvListado.Rows.Add(MatrizProductos[i, 0], MatrizProductos[i, 1], MatrizProductos[i, 2], MatrizProductos[i, 3]);
+                    dgvListado.Rows.Add(MatrizProductos[i, 0],
+                        MatrizProductos[i, 1],
+                        MatrizProductos[i, 2], 
+                        MatrizProductos[i, 3]);
                 }
             }
         
@@ -56,7 +60,7 @@ namespace pryLangIEFI
         {
             for (int i = 0; i < 10; i++)
             {
-                if (MatrizProductos[i,2]!=null)
+                if (MatrizProductos[i,2] != null)
                 {
                     if (cboProductoListado.Items.Contains(MatrizProductos[i, 2]) == false)
                     {
@@ -73,9 +77,12 @@ namespace pryLangIEFI
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    if (MatrizProductos[i, 2]==cboProductoListado.Text) ;
+                    if (MatrizProductos[i, 2]==cboProductoListado.Text) 
                     {
-                        dgvListado.Rows.Add(MatrizProductos[i, 0], MatrizProductos[i, 1], MatrizProductos[i, 2], MatrizProductos[i, 3]);
+                        dgvListado.Rows.Add(MatrizProductos[i, 0],
+                            MatrizProductos[i, 1], 
+                            MatrizProductos[i, 2],
+                            MatrizProductos[i, 3]);
                     }
                 }
             }
@@ -85,10 +92,18 @@ namespace pryLangIEFI
                 {
                     if (MatrizProductos[i,3]==txtCantidadListado.Text)
                     {
-                        dgvListado.Rows.Add(MatrizProductos[i, 0], MatrizProductos[i, 1], MatrizProductos[i, 2], MatrizProductos[i, 3]);
+                        dgvListado.Rows.Add(MatrizProductos[i, 0],
+                                            MatrizProductos[i, 1],
+                                            MatrizProductos[i, 2],
+                                            MatrizProductos[i, 3]);
                     }
                 }
             }
+        }
+
+        private void dgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

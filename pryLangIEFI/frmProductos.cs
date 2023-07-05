@@ -13,14 +13,15 @@ namespace pryLangIEFI
 {
     public partial class frmProductos : Form
     {
-        string[,] MatrizProductos = new string[10, 4];
+        public string[,] MatrizProductos = new string[10, 4];
         int fila = 0;
         frmListado listado = new frmListado();  
         public frmProductos()
         {
             InitializeComponent();
-            txtProducto.Focus(); 
-        }
+            txtProducto.Focus();
+            
+    }
 
         private void frmProductos_Load(object sender, EventArgs e)
         {
@@ -50,13 +51,12 @@ namespace pryLangIEFI
                 else
                 {
                     int n = dgvProductos.Rows.Add();
-                    dgvProductos.Rows[n].Cells[1].Value = txtIdProductos.Text;
-                    dgvProductos.Rows[n].Cells[0].Value = txtProducto.Text;
+                    dgvProductos.Rows[n].Cells[0].Value = "";
+                    dgvProductos.Rows[n].Cells[1].Value = txtProducto.Text;
                     dgvProductos.Rows[n].Cells[2].Value = dtpFechaProductos.Text;
-
-                    listado.MatrizProductos[fila,1]=(fila+1).ToString();
-                    listado.MatrizProductos[fila, 2] = dtpFechaProductos.Text;
-                    listado.MatrizProductos[fila,0]= txtProducto.Text;
+                    listado.MatrizProductos[fila, 0] = (fila + 1).ToString();
+                    listado.MatrizProductos[fila, 1] = dtpFechaProductos.Text;
+                    listado.MatrizProductos[fila, 2] = txtProducto.Text;
                     fila++;
                 }
                 
@@ -65,7 +65,7 @@ namespace pryLangIEFI
             {
                 MessageBox.Show("Agrege un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
+            }  
             
         }
 
@@ -75,9 +75,18 @@ namespace pryLangIEFI
         }
 
         private void btnListadoProductos_Click(object sender, EventArgs e)
+        {  
+            listado.ShowDialog();   
+        }
+
+        private void cboConsultas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            frmListado frmListado = new frmListado();  
-            frmListado.ShowDialog();    
+
+        }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

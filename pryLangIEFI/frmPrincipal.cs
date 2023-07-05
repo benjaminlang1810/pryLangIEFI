@@ -37,7 +37,8 @@ namespace pryLangIEFI
         }
 
         private void btnListado_Click(object sender, EventArgs e)
-        {
+        {   
+            this.Hide();
             frmListado frmListado = new frmListado();
             frmListado.ShowDialog();
         }

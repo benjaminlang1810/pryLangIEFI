@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
             this.dgvListado = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblListado = new System.Windows.Forms.Label();
             this.optProducto = new System.Windows.Forms.RadioButton();
             this.optCantidad = new System.Windows.Forms.RadioButton();
@@ -42,62 +39,37 @@
             this.btnVerTodo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnVolverListado = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListado
             // 
+            this.dgvListado.AllowUserToAddRows = false;
+            this.dgvListado.AllowUserToDeleteRows = false;
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
             this.ID,
             this.Fecha,
+            this.Producto,
             this.Cantidad});
             this.dgvListado.Location = new System.Drawing.Point(12, 75);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
             this.dgvListado.RowHeadersWidth = 51;
             this.dgvListado.RowTemplate.Height = 24;
-            this.dgvListado.Size = new System.Drawing.Size(875, 150);
+            this.dgvListado.Size = new System.Drawing.Size(875, 189);
             this.dgvListado.TabIndex = 0;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 125;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 125;
+            this.dgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListado_CellContentClick);
             // 
             // lblListado
             // 
             this.lblListado.AutoSize = true;
             this.lblListado.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListado.Location = new System.Drawing.Point(342, 9);
+            this.lblListado.Location = new System.Drawing.Point(378, 9);
             this.lblListado.Name = "lblListado";
             this.lblListado.Size = new System.Drawing.Size(162, 49);
             this.lblListado.TabIndex = 4;
@@ -107,9 +79,11 @@
             // optProducto
             // 
             this.optProducto.AutoSize = true;
+            this.optProducto.Checked = true;
+            this.optProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optProducto.Location = new System.Drawing.Point(266, 270);
             this.optProducto.Name = "optProducto";
-            this.optProducto.Size = new System.Drawing.Size(82, 20);
+            this.optProducto.Size = new System.Drawing.Size(97, 24);
             this.optProducto.TabIndex = 5;
             this.optProducto.TabStop = true;
             this.optProducto.Text = "Producto";
@@ -118,9 +92,10 @@
             // optCantidad
             // 
             this.optCantidad.AutoSize = true;
+            this.optCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optCantidad.Location = new System.Drawing.Point(481, 270);
             this.optCantidad.Name = "optCantidad";
-            this.optCantidad.Size = new System.Drawing.Size(82, 20);
+            this.optCantidad.Size = new System.Drawing.Size(96, 24);
             this.optCantidad.TabIndex = 6;
             this.optCantidad.TabStop = true;
             this.optCantidad.Text = "Cantidad";
@@ -128,6 +103,7 @@
             // 
             // cboProductoListado
             // 
+            this.cboProductoListado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProductoListado.FormattingEnabled = true;
             this.cboProductoListado.Location = new System.Drawing.Point(266, 292);
             this.cboProductoListado.Name = "cboProductoListado";
@@ -153,7 +129,7 @@
             // 
             // btnVerTodo
             // 
-            this.btnVerTodo.Location = new System.Drawing.Point(351, 361);
+            this.btnVerTodo.Location = new System.Drawing.Point(351, 388);
             this.btnVerTodo.Name = "btnVerTodo";
             this.btnVerTodo.Size = new System.Drawing.Size(189, 31);
             this.btnVerTodo.TabIndex = 10;
@@ -181,10 +157,43 @@
             this.btnVolverListado.UseVisualStyleBackColor = true;
             this.btnVolverListado.Click += new System.EventHandler(this.btnVolverListado_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 125;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
+            // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(899, 478);
             this.Controls.Add(this.btnVolverListado);
             this.Controls.Add(this.btnBorrar);
@@ -196,8 +205,9 @@
             this.Controls.Add(this.optProducto);
             this.Controls.Add(this.lblListado);
             this.Controls.Add(this.dgvListado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListado";
-            this.Text = "frmListado";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.frmListado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
@@ -217,9 +227,9 @@
         private System.Windows.Forms.Button btnVerTodo;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnVolverListado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

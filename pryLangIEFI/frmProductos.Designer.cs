@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.lblProductos = new System.Windows.Forms.Label();
             this.gbProductos = new System.Windows.Forms.GroupBox();
             this.btnListadoProductos = new System.Windows.Forms.Button();
@@ -35,14 +36,12 @@
             this.btnCargarProductos = new System.Windows.Forms.Button();
             this.dtpFechaProductos = new System.Windows.Forms.DateTimePicker();
             this.lblFechaVenta = new System.Windows.Forms.Label();
-            this.txtIdProductos = new System.Windows.Forms.TextBox();
-            this.lblIdProductos = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +50,7 @@
             // 
             this.lblProductos.AutoSize = true;
             this.lblProductos.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductos.Location = new System.Drawing.Point(36, 9);
+            this.lblProductos.Location = new System.Drawing.Point(13, 9);
             this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProductos.Name = "lblProductos";
             this.lblProductos.Size = new System.Drawing.Size(217, 49);
@@ -65,14 +64,12 @@
             this.gbProductos.Controls.Add(this.btnCargarProductos);
             this.gbProductos.Controls.Add(this.dtpFechaProductos);
             this.gbProductos.Controls.Add(this.lblFechaVenta);
-            this.gbProductos.Controls.Add(this.txtIdProductos);
-            this.gbProductos.Controls.Add(this.lblIdProductos);
             this.gbProductos.Controls.Add(this.txtProducto);
             this.gbProductos.Controls.Add(this.lblProducto);
             this.gbProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProductos.Location = new System.Drawing.Point(12, 62);
+            this.gbProductos.Location = new System.Drawing.Point(6, 62);
             this.gbProductos.Name = "gbProductos";
-            this.gbProductos.Size = new System.Drawing.Size(362, 324);
+            this.gbProductos.Size = new System.Drawing.Size(368, 324);
             this.gbProductos.TabIndex = 1;
             this.gbProductos.TabStop = false;
             this.gbProductos.Text = "Carga De Productos";
@@ -80,7 +77,7 @@
             // 
             // btnListadoProductos
             // 
-            this.btnListadoProductos.Location = new System.Drawing.Point(30, 260);
+            this.btnListadoProductos.Location = new System.Drawing.Point(6, 194);
             this.btnListadoProductos.Name = "btnListadoProductos";
             this.btnListadoProductos.Size = new System.Drawing.Size(271, 43);
             this.btnListadoProductos.TabIndex = 17;
@@ -90,7 +87,7 @@
             // 
             // btnVolverProductos
             // 
-            this.btnVolverProductos.Location = new System.Drawing.Point(30, 207);
+            this.btnVolverProductos.Location = new System.Drawing.Point(6, 141);
             this.btnVolverProductos.Name = "btnVolverProductos";
             this.btnVolverProductos.Size = new System.Drawing.Size(131, 48);
             this.btnVolverProductos.TabIndex = 16;
@@ -100,7 +97,7 @@
             // 
             // btnCargarProductos
             // 
-            this.btnCargarProductos.Location = new System.Drawing.Point(167, 207);
+            this.btnCargarProductos.Location = new System.Drawing.Point(143, 141);
             this.btnCargarProductos.Name = "btnCargarProductos";
             this.btnCargarProductos.Size = new System.Drawing.Size(134, 48);
             this.btnCargarProductos.TabIndex = 15;
@@ -110,7 +107,7 @@
             // 
             // dtpFechaProductos
             // 
-            this.dtpFechaProductos.Location = new System.Drawing.Point(33, 153);
+            this.dtpFechaProductos.Location = new System.Drawing.Point(6, 112);
             this.dtpFechaProductos.Name = "dtpFechaProductos";
             this.dtpFechaProductos.Size = new System.Drawing.Size(268, 22);
             this.dtpFechaProductos.TabIndex = 12;
@@ -119,28 +116,11 @@
             // 
             this.lblFechaVenta.AutoSize = true;
             this.lblFechaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaVenta.Location = new System.Drawing.Point(29, 130);
+            this.lblFechaVenta.Location = new System.Drawing.Point(2, 89);
             this.lblFechaVenta.Name = "lblFechaVenta";
             this.lblFechaVenta.Size = new System.Drawing.Size(141, 20);
             this.lblFechaVenta.TabIndex = 11;
             this.lblFechaVenta.Text = "Fecha Productos:";
-            // 
-            // txtIdProductos
-            // 
-            this.txtIdProductos.Location = new System.Drawing.Point(89, 74);
-            this.txtIdProductos.Name = "txtIdProductos";
-            this.txtIdProductos.Size = new System.Drawing.Size(268, 22);
-            this.txtIdProductos.TabIndex = 10;
-            // 
-            // lblIdProductos
-            // 
-            this.lblIdProductos.AutoSize = true;
-            this.lblIdProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProductos.Location = new System.Drawing.Point(56, 74);
-            this.lblIdProductos.Name = "lblIdProductos";
-            this.lblIdProductos.Size = new System.Drawing.Size(27, 20);
-            this.lblIdProductos.TabIndex = 9;
-            this.lblIdProductos.Text = "Id:";
             // 
             // txtProducto
             // 
@@ -148,6 +128,7 @@
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(268, 22);
             this.txtProducto.TabIndex = 3;
+            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // lblProducto
             // 
@@ -161,56 +142,56 @@
             // 
             // dgvProductos
             // 
-            this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.ID,
+            this.Producto,
+            this.Fecha});
             this.dgvProductos.Location = new System.Drawing.Point(380, 62);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(473, 150);
+            this.dgvProductos.Size = new System.Drawing.Size(508, 324);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
+            // ID
             // 
-            this.Column1.HeaderText = "Producto";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
             // 
-            // Column2
+            // Producto
             // 
-            this.Column2.HeaderText = "ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 125;
             // 
-            // Column3
+            // Fecha
             // 
-            this.Column3.HeaderText = "Fecha";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 125;
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(860, 408);
+            this.ClientSize = new System.Drawing.Size(900, 419);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.gbProductos);
             this.Controls.Add(this.lblProductos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmProductos";
             this.Text = "Productos";
@@ -229,16 +210,14 @@
         private System.Windows.Forms.GroupBox gbProductos;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.Label lblIdProductos;
-        private System.Windows.Forms.TextBox txtIdProductos;
         private System.Windows.Forms.Label lblFechaVenta;
         private System.Windows.Forms.DateTimePicker dtpFechaProductos;
         private System.Windows.Forms.Button btnListadoProductos;
         private System.Windows.Forms.Button btnVolverProductos;
         private System.Windows.Forms.Button btnCargarProductos;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
