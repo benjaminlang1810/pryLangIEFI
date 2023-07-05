@@ -53,7 +53,7 @@
             this.lblProductos.Location = new System.Drawing.Point(13, 9);
             this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(217, 49);
+            this.lblProductos.Size = new System.Drawing.Size(172, 40);
             this.lblProductos.TabIndex = 0;
             this.lblProductos.Text = "Productos";
             // 
@@ -77,7 +77,7 @@
             // 
             // btnListadoProductos
             // 
-            this.btnListadoProductos.Location = new System.Drawing.Point(6, 194);
+            this.btnListadoProductos.Location = new System.Drawing.Point(24, 270);
             this.btnListadoProductos.Name = "btnListadoProductos";
             this.btnListadoProductos.Size = new System.Drawing.Size(271, 43);
             this.btnListadoProductos.TabIndex = 17;
@@ -87,7 +87,7 @@
             // 
             // btnVolverProductos
             // 
-            this.btnVolverProductos.Location = new System.Drawing.Point(6, 141);
+            this.btnVolverProductos.Location = new System.Drawing.Point(24, 217);
             this.btnVolverProductos.Name = "btnVolverProductos";
             this.btnVolverProductos.Size = new System.Drawing.Size(131, 48);
             this.btnVolverProductos.TabIndex = 16;
@@ -97,7 +97,7 @@
             // 
             // btnCargarProductos
             // 
-            this.btnCargarProductos.Location = new System.Drawing.Point(143, 141);
+            this.btnCargarProductos.Location = new System.Drawing.Point(161, 217);
             this.btnCargarProductos.Name = "btnCargarProductos";
             this.btnCargarProductos.Size = new System.Drawing.Size(134, 48);
             this.btnCargarProductos.TabIndex = 15;
@@ -107,18 +107,18 @@
             // 
             // dtpFechaProductos
             // 
-            this.dtpFechaProductos.Location = new System.Drawing.Point(6, 112);
+            this.dtpFechaProductos.Location = new System.Drawing.Point(6, 140);
             this.dtpFechaProductos.Name = "dtpFechaProductos";
-            this.dtpFechaProductos.Size = new System.Drawing.Size(268, 22);
+            this.dtpFechaProductos.Size = new System.Drawing.Size(268, 19);
             this.dtpFechaProductos.TabIndex = 12;
             // 
             // lblFechaVenta
             // 
             this.lblFechaVenta.AutoSize = true;
             this.lblFechaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaVenta.Location = new System.Drawing.Point(2, 89);
+            this.lblFechaVenta.Location = new System.Drawing.Point(2, 117);
             this.lblFechaVenta.Name = "lblFechaVenta";
-            this.lblFechaVenta.Size = new System.Drawing.Size(141, 20);
+            this.lblFechaVenta.Size = new System.Drawing.Size(119, 17);
             this.lblFechaVenta.TabIndex = 11;
             this.lblFechaVenta.Text = "Fecha Productos:";
             // 
@@ -126,7 +126,7 @@
             // 
             this.txtProducto.Location = new System.Drawing.Point(89, 40);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(268, 22);
+            this.txtProducto.Size = new System.Drawing.Size(268, 19);
             this.txtProducto.TabIndex = 3;
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
@@ -136,7 +136,7 @@
             this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.Location = new System.Drawing.Point(2, 40);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(81, 20);
+            this.lblProducto.Size = new System.Drawing.Size(69, 17);
             this.lblProducto.TabIndex = 2;
             this.lblProducto.Text = "Producto:";
             // 
@@ -148,12 +148,12 @@
             this.ID,
             this.Producto,
             this.Fecha});
-            this.dgvProductos.Location = new System.Drawing.Point(380, 62);
+            this.dgvProductos.Location = new System.Drawing.Point(380, 65);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(508, 324);
+            this.dgvProductos.Size = new System.Drawing.Size(428, 324);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -183,10 +183,10 @@
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(900, 419);
+            this.ClientSize = new System.Drawing.Size(815, 393);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.gbProductos);
             this.Controls.Add(this.lblProductos);
